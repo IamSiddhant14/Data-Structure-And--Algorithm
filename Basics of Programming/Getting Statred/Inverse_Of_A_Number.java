@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main{
+public class Inverse_Of_A_Number {
 
 public static void main(String[] args) {
   // write your code here 
@@ -24,6 +24,6 @@ public static void main(String[] args) {
    }
    
    System.out.println(count);
-  
+  scn.close();
  }
 }

@@ -1,6 +1,6 @@
 import java.util.*;
   
-  public class Main{
+  public class Print_Fibonacci_Numbers_Till_N {
   
   public static void main(String[] args) {
       // write your code here
@@ -16,6 +16,6 @@ import java.util.*;
           b=c;
           
       }
-      
+      scn.close(); 
    }
   }

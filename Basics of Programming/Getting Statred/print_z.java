@@ -1,6 +1,5 @@
-import java.util.*;
 
-public class Main {
+public class print_z {
 
     public static void main(String[] args) {
         // Write your code here

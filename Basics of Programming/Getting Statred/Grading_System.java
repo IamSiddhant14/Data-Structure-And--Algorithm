@@ -1,6 +1,6 @@
 import java.util.*;
   
-  public class Main{
+  public class Grading_System {
   
   public static void main(String[] args) {
       // input - don't change this code
@@ -21,7 +21,7 @@ import java.util.*;
           System.out.println("below par");
       }
       
-  
+      scn.close();
    }
   }
   

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Print_All_Primes_Till_N {
   public static void main(String[] args) {
     // write your code here
 
@@ -22,6 +22,7 @@ public class Main {
           System.out.println(i);
       }
     }
+    scn.close();
   }
 }
 

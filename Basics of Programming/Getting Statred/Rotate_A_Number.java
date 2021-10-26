@@ -1,6 +1,6 @@
 import java.util.*;
    
-   public class Main{
+   public class Rotate_A_Number {
    
    public static void main(String[] args) {
      // write your code here  
@@ -28,7 +28,7 @@ import java.util.*;
      }
      
      System.out.println(n);
-     
+     scn.close();
     }
    }
    

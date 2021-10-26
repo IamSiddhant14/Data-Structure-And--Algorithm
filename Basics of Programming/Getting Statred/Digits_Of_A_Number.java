@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Main {
+public class Digits_Of_A_Number {
 
   public static void main(String[] args) {
     // write your code here
@@ -22,6 +22,6 @@ public class Main {
         n =n %div;
         div = div/10;
     }
-    
+    scn.close();
   }
 }

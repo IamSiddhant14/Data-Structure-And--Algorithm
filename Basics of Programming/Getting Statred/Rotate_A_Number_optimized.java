@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Main {
+public class Rotate_A_Number_optimized {
 
   public static void main(String[] args) {
     // write your code here
@@ -35,6 +35,7 @@ public class Main {
 
 
     System.out.println(n);
+    scn.close();
   }
 }
 
