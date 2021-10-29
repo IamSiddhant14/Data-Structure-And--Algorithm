@@ -15,7 +15,7 @@ public class partten_3 {
             }
             System.out.println();
         }
-
+        scn.close();
     }
 
 }

@@ -18,7 +18,7 @@ public class partten_4 {
 
             System.out.println();
         }
-
+        scn.close();
     }
 
 }

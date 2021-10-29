@@ -13,6 +13,7 @@ public class partten_2 {
             }
             System.out.println();
         }
+        scn.close();
     }
 
 }
