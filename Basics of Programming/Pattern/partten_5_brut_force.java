@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class partten_5 {
+public class partten_5_brut_force {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
