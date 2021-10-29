@@ -14,7 +14,7 @@ public class partten_8 {
 
         }
 
-        // write ur code here
+        scn.close();
 
     }
 }
