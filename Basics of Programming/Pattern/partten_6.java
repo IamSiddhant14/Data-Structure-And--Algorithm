@@ -7,7 +7,7 @@ public class partten_6 {
 
         int n = scn.nextInt();
         int space = 1;
-        int star = n + 1;
+        int star = n + 1;//Never genrealise this number should always be variable
 
         for (int i = 1; i <= n; i++) {
 
