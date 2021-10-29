@@ -13,7 +13,7 @@ public class partten_5 {
 
             // space
 
-            for (int j = 1; j <= n - i - 2; j++) {
+            for (int j = 1; j <= (n / 2) + 1 - i; j++) {
                 System.out.print("\t");
             }
 
@@ -29,23 +29,23 @@ public class partten_5 {
 
         // Second part
 
-        for (int i = 1; i <= (n / 2); i++) {
+        for (int i = 1; i <= (n / 2); i++) {// row
 
             // space
 
-            for (int j = 1; j <= i; j++) {
+            for (int j = 1; j <= i; j++) {// col space
                 System.out.print("\t");
             }
 
             // star
 
-            for (int k = 1; k <= n - 2 * i; k++) {
+            for (int k = 1; k <= n - 2 * i; k++) {// col star
                 System.out.print("*\t");
             }
 
             System.out.println();
 
         }
-
+    scn.close();
     }
 }
