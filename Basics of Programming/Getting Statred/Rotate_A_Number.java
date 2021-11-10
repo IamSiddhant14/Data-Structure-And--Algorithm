@@ -3,7 +3,9 @@ import java.util.*;
    public class Rotate_A_Number {
    
    public static void main(String[] args) {
-     // write your code here  
+     // here in this question we will frist check if value of k is greather then n if yes then devide it by n and now new value 
+     // would be k=k% count where count is the number of digits in n if k < 0 then k = k+n now until value ok k isnt =0 r =n%10 , n=n/10 , r=r*Math.pow(10,count -1
+     // n=n+r, k-- ,when k ==0 then print k 
      Scanner scn = new Scanner(System.in);
      int n =scn.nextInt();
      int k = scn.nextInt();
@@ -23,7 +25,7 @@ import java.util.*;
         n = n/10;
         r = r* (int) Math.pow(10, count - 1);
         n=n+ r;
-        // count --;
+        // count --;//since we arent reducing the size of n
         k--;
      }
      

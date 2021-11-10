@@ -3,7 +3,7 @@ import java.util.*;
 public class Reverse_A_Number {
 
   public static void main(String[] args) {
-    // write your code here
+    // Here in this question we will devide n by 10 save it in a varible and then print that variable
     Scanner scn = new Scanner(System.in);
     int n = scn.nextInt();
     while( n != 0){
