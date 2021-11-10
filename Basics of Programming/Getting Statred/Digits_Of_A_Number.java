@@ -3,7 +3,9 @@ import java.util.*;
 public class Digits_Of_A_Number {
 
   public static void main(String[] args) {
-    // write your code here
+    // Here in this question we need to print the input digit each number from start to end row wise
+    // to do this we frist need to count the digit in that number then after that Math.pow(10 ,count -1);
+    // now untile this power != 0 print(n/power) , power =/10 , n=n%power .
     Scanner scn = new Scanner(System.in);
     int n = scn.nextInt();
     int temp = n;
