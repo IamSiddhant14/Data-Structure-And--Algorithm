@@ -3,7 +3,7 @@ import java.util.*;
   public class Print_Fibonacci_Numbers_Till_N {
   
   public static void main(String[] args) {
-      // write your code here
+      // Frist print a now calculate c ,assign value of c to b and value of b to a and yeah thats pretty much it
       Scanner scn = new Scanner(System.in);
       int a = 0;
       int b = 1;
