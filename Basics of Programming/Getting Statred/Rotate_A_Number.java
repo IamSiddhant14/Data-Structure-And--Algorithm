@@ -25,7 +25,7 @@ import java.util.*;
         n = n/10;
         r = r* (int) Math.pow(10, count - 1);
         n=n+ r;
-        count --;
+        // count --;//since we arent reducing the size of n
         k--;
      }
      
