@@ -8,7 +8,7 @@ import java.util.*;
       int marks = scn.nextInt();
       // input - don't change this code
       
-      // code here    
+      // use of( if elseif and else) statement to determinr the grades of a person
       if(marks>90){
           System.out.println("excellent");
       }else if(marks >80){
