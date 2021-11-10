@@ -5,7 +5,12 @@ public abstract class is_prime {
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
-
+        
+        //Take the input of how many number will be given by the user after that run the loop for that number of times
+        // for each iteration take the number which is to be determined whether the number is prime or not .
+        // To do so divide the given number with all the number which is less then its square root if any number 
+        // completely divides it then inc flag value by one or else do nothing after the completion of the loop if flag value is 1 
+        // print not prime else print prime
         int t = scn.nextInt();
         int j = 1;
         while (j <= t) {
