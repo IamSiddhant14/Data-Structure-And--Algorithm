@@ -7,6 +7,7 @@ public class Decimal_To_Any_Base {
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
+         // Here this b is destination base
         int b = scn.nextInt();
         int dn = getValueInBase(n, b);
         System.out.println(dn);
