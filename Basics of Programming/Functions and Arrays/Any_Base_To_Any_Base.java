@@ -10,6 +10,49 @@ public class Any_Base_To_Any_Base {
         int sourceBase = scn.nextInt();
         int destBase = scn.nextInt();
 
+
+        int ans = getValue(n, sourceBase, destBase);
+        System.out.println(ans);
         scn.close();
+
     }
+
+    public static int getValue(int n, int sourceBase, int destBase) {
+        int sourcetoten = sourceToDecimal(n, sourceBase);
+        int tentodes = decimalToDest(sourcetoten, destBase);
+        return tentodes;
+    }
+
+    public static int sourceToDecimal(int n, int b) {
+
+        int total = 0;
+        int power = 1;
+
+        while (n > 0) {
+            int r = n % 10;
+            n = n / 10;
+            r = r * power;
+            power = power * b;
+            total += r;
+        }
+
+        return total;
+    }
+
+    public static int decimalToDest(int n, int b) {
+
+        int total = 0;
+        int power = 1;
+
+        while (n > 0) {
+            int r = n % b;
+            n = n / b;
+            r = r * power;
+            power = power * 10;
+            total += r;
+        }
+
+        return total;
+    }
+
 }
