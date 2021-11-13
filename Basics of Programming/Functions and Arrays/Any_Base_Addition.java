@@ -1,6 +1,9 @@
 import java.util.*;
 
 public class Any_Base_Addition {
+    
+    //Here in this question we are gone add two numbers having a base x such that if sum of n1 + n2 + r is greather than the provided base then the carry will the q of sum / b and the 
+    // number which will bee added to the total will be sum % b * power , Here the value of power after every iteration will be p*10 
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
