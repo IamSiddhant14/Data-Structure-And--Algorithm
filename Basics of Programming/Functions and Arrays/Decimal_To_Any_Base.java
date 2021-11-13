@@ -2,7 +2,9 @@ import java.util.*;
 
 public class Decimal_To_Any_Base {
     
-    // In this question we are required to convert a number in to the power of provided number so please refferthe vedio to find the short trick to it
+    // In this question we are required to convert a number which is of the base of ten to the power of provided number so in order to acccompish it we will frist run the loop until the 
+    // the value of n dont became equal to zero after that and each iteration we will frist take the last digit multiply it to the 10 (as decimal here) and add it to the to total which h
+    // here was been initalized to o , After each iteration we will increase the value of power by * 10 ;
 
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
