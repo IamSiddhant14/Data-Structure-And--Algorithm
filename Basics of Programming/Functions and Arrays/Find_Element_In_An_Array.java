@@ -1,36 +1,32 @@
 import java.io.*;
 import java.util.*;
 
-public class Find_Element_In_An_Array {
+public class Main {
+    //Here in this question we need to find the element occurnce index so frist we will populate the array then after that we will check it for every element in the array 
+    // is there or not if not present then we would return -1 or else the index of that element by saving it in an variable and breaking to return that number
 
-    public static void main(String[] args) throws Exception {
+  public static void main(String[] args) throws Exception {
 
-        Scanner scn = new Scanner(System.in);
-        int n = scn.nextInt();
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
 
-        int[] arr = new int[n];
-        int d = scn.nextInt();
+    int[] arr = new int[n] ;
 
-        // for( int i = 0; i < arr.length ; i++ ){
-        // arr[i] = scn.nextInt();
-        // }
-
-        for (int i = 0; i < arr.length; i++) {
-
-            arr[i] = scn.nextInt();
-
-            if (arr[i] == d) {
-                System.out.print(i);
-                break;
-            }
-
-            if (i == (n - 1)) {
-                System.out.print(-1);
-                break;
-            }
-        }
-
-        scn.close();
+    for ( int i = 0 ; i < arr.length ; i++) {
+      arr[i] = scn.nextInt();
     }
+      
+    int d = scn.nextInt();
+    int print = -1;
+    for ( int i = 0; i < arr.length ; i++) {
+      if (arr[i] == d) {
+        print = i;
+        break ;
+      }
+    }
+    System.out.print(print);
+
+
+  }
 
 }
