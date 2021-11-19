@@ -1,6 +1,11 @@
 // import java.io.*;
 import java.util.*;
 
+
+//Here in this question in order to print the required bar chart we will frist calculate the largest element present in the array after that 
+//we will traverse through row for max value which is present in the array and inside that for loop for each iteration of that loop we will 
+//calcuate whether the arr index value which is present at that index is is greather or equal to the row number or not if found then print star or
+// else we will print a space 
 public class Bar_Chart_Horizontal {
 
     public static void main(String[] args) throws Exception {
