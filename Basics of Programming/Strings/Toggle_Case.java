@@ -4,6 +4,8 @@ public class Toggle_Case {
 
 	public static String toggleCase(String str){
 
+        //Here in this question we are using string builders so as to avoid tle error as in string in order to insert a 
+        // performe conacatenation opertion is an time wise expensive task
 		StringBuilder sb = new StringBuilder();
 
 		// S - 'A' = s - 'a';
