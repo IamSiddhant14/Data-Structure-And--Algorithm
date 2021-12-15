@@ -60,7 +60,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Print_Increasing_Decreasing {
 
     public static Scanner scn = new Scanner(System.in);
 
