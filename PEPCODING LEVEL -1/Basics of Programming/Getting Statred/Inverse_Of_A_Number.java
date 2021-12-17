@@ -19,8 +19,8 @@ public static void main(String[] args) {
    while( n != 0){
      
        od = n%10;
-       rp = od;
-       rd = op *(int)Math.pow(10, od - 1);
+       rp = (int)Math.pow(10, od - 1);
+       rd = op *rp;
        count = count +rd;
        n=n/10;
        op++;
