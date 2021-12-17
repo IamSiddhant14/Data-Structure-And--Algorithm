@@ -1,5 +1,5 @@
 
-    import java.util.*;
+import java.util.*;
 
 public class Prime_Factorization_Of_A_Number_optimized {
 public static void main(String[] args) {
