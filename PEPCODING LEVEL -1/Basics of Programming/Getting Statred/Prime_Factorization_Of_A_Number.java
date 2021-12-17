@@ -23,3 +23,9 @@ public class Prime_Factorization_Of_A_Number {
     }
 
 }
+
+
+
+// Prime Factorisation Of A Number optimized in next file
+
+
