@@ -2,8 +2,11 @@ import java.util.*;
 
 public class Any_Base_To_Any_Base {
     // TO convert any base to any base we need to follow a specific method but
-    // instead of remenbering all of that we frist conver the b1 base to 10 base and
-    // then that converted base 10 to b2 base so as to avid any remembring of stuff
+    // Instead of remenbering all of that we frist conver the b1 base to 10 base and
+    // Then that converted base 10 to b2 base so as to avid any remembring of stuff
+    // Here in this we will create three fuction of which one has the duty to multiply a number with an provided integer
+    // Second function will help us in adding digits
+    // Third function calls the other two functions
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
