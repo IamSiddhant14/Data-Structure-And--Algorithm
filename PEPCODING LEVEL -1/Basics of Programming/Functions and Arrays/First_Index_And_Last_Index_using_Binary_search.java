@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.*;
 
+public class First_Index_And_Last_Index_using_Binary_search{
 
-public class First_Index_And_Last_Index_using_Binary_search {
 public static void main(String[] args) throws Exception {
     
     Scanner scn = new Scanner(System.in);
@@ -46,15 +46,26 @@ public static void main(String[] args) throws Exception {
     //FOR LI
     
     int l = index;
-    while( arr[l] == d ){
+    if( l == -1){
+        System.out.println(l);
+    }else{
+        
+       while( arr[l] == d ){
         l--;
-    }
+       }
     
-    l++;
+       l++;
+        
+    }
+
     
     //FOR HI
     
     int h = index;
+    if( h == -1){
+        System.out.println(h);
+        return;
+    }
     while( arr[h] == d ){
         h++;
     }
