@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class First_Index_And_Last_Index {
+public class First_Index_And_Last_Index_using_linear_search {
 public static void main(String[] args) throws Exception {
     
     Scanner scn = new Scanner(System.in);
