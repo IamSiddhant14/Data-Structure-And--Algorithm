@@ -1,7 +1,7 @@
 // import java.io.*;
 import java.util.*;
 
-public class state_of_wakanda_optimized {
+public class state_of_wakanda_2_optimized {
 
     public static Scanner scn = new Scanner(System.in);
     
