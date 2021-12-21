@@ -1,6 +1,9 @@
 import java.io.*;
 import java.util.*;
 
+
+//Here in this question in order to obtain the desired result we will frist perfome the transpose operation on the entire upper part of array after that we 
+// Will be performing the col reverse opertion on the all the col and the respective rows
 public class Rotate_by_nineT_Degree {
 
 
