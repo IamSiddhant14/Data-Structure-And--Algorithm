@@ -10,7 +10,7 @@ public class Digits_Of_A_Number {
     int n = scn.nextInt();
     int temp = n;
     int count = 0;
-    while ( temp != 0 ) {// when temp becames zero we had counted alll the digits present the number
+    while ( temp != 0 ) {// when temp becames zero we had counted all the digits present the number
       count++;
       temp = temp / 10;
     }
