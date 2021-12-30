@@ -30,8 +30,8 @@ public class Any_Base_Addition {
 
             sum_all = r1 + r2 + r;
 
-            int lastnum = sum_all % b;
-
+            int lastnum = sum_all % b;  //This order is important please keep this in mind
+          
             r = sum_all / b;
 
             result = result + (lastnum * power);
