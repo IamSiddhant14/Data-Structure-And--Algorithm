@@ -1,7 +1,5 @@
 public class kpc {
 
-  
-    
         static String[] codes = {"","","abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"}; 
         
         public List<String> letterCombinations(String digits) {
