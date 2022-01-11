@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Display_A_Linkedlist {
+public class Remove_First_In_Linkedlist {
 
   public static class Node {
     int data;
@@ -33,19 +33,23 @@ public class Display_A_Linkedlist {
     }
 
     public void display(){
-        
-        if(size == 0)
-           return;
-        
-        Node curr = head;//Refrence variable storing address
-        while( curr != null){
-            
-            System.out.print(curr.data+" ");
-            curr = curr.next;
-            
+      for(Node temp = head; temp != null; temp = temp.next){
+        System.out.print(temp.data + " ");
+      }
+      System.out.println();
+    }
+
+    public void removeFirst(){
+        if( size == 0){
+            System.out.println("List is empty");
+            return;
+        }else{
+            Node curr = head;
+            head = head.next;
+            --size;
         }
-        System.out.println();
-        
+
+      
     }
   }
 
@@ -62,10 +66,11 @@ public class Display_A_Linkedlist {
         System.out.println(list.size());
       } else if(str.startsWith("display")){
         list.display();
+      } else if(str.startsWith("removeFirst")){
+        list.removeFirst();
       }
       str = br.readLine();
     }
   }
 }
     
-
