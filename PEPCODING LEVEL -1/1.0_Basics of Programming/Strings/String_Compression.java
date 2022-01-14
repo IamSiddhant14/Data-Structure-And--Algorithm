@@ -1,62 +1,56 @@
 import java.io.*;
 import java.util.*;
-    
-public class String_Compression {
+
+public class Main {
 
 	public static String compression1(String str){
-
-		StringBuilder sb = new StringBuilder();
-		sb.append(str.charAt(0));
-
-		for( int i = 1; i<str.length() ; i++){
-
-			char curr = str.charAt(i);
-			char prev = str.charAt(i-1);
-
-			if( curr != prev){
-				sb.append(curr);
-			}
-		}
-
-		return sb.toString();
+	    
+	    StringBuilder sb = new StringBuilder();
+	    sb.append(str.charAt(0));
+	    
+	    for( int i = 1; i<str.length();i++){
+	         char one = str.charAt(i-1);
+	         char two = str.charAt(i);
+	         
+	         if( one != two ){
+	             sb.append(two);
+	         }
+	         
+	    }
+	    
+		return  sb.toString();
 	}
 
 	public static String compression2(String str){
+	    
+	    StringBuilder sb = new StringBuilder();
+	    sb.append(str.charAt(0));
+	    
+	    int count = 1;
+	    
+	    for( int i =1; i<str.length(); i++){
+	        
+	         char one = str.charAt(i-1);
+	         char two = str.charAt(i);
+	         if( one == two ){
+	             count++ ;
+	         }else{
+	             if( count > 1){
+	                 
+	                 sb.append(count);
+	                 sb.append(two);
+	                 count = 1;
+	                 
+	             }else{
+	                 sb.append(two);
+	             }
+	         }
+	         
+	         if( i == str.length()-1 && count >1 ){
+	              sb.append(count);
+	         }
 
-		StringBuilder sb = new StringBuilder();
-		sb.append(str.charAt(0));
-
-		for( int i =1; i< str.length(); i++){
-
-			char curr = str.charAt(i);
-			char prev = str.charAt(i-1);
-
-            int count = 1;
-			while( curr == prev && i <str.length()){
-
-				count++;
-				i++;
-                if( i != str.length()){
-					curr = str.charAt(i);
-				    prev = str.charAt(i-1);
-
-				}
-
-
-			}
-
-			if( count >1){
-				sb.append(count);
-			}
-			
-            if(i == str.length()){
-				
-				break;
-			}
-			sb.append(curr);
-			
-			
-		}
+	    }
 		
 
 		return sb.toString();
@@ -69,5 +63,3 @@ public class String_Compression {
 	}
 
 }
-    
-
