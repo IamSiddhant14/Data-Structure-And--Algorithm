@@ -19,15 +19,12 @@ public class Toggle_Case {
                char c = (char)(s - 'A' + 'a');
 			   sb.append(c);
 
-
 			}else{
 
 				char c = (char)(s - 'a' +'A');
 				sb.append(c);
 
 			}
-
-
 		}
 
 		return sb.toString();
