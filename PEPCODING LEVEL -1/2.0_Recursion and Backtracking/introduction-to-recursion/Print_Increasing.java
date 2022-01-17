@@ -15,7 +15,7 @@ public class Print_Increasing {
     public static void printIncreasing(int n){
 
         if( n == 0){
-            return;//Here this is returning to the n = 1 function and the n= 0 function is been removed from the stack
+            return;//Here this is returning to the n = 1 function and the n= 0 function is been removed from the call stack
         }
         int m = n-1;
         printIncreasing(m);
