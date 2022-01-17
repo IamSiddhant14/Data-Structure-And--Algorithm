@@ -1,54 +1,61 @@
-// import java.io.*;
+import java.io.*;
 import java.util.*;
 
-public class Subsets_Of_Array {
+public class Main{
 
 public static void main(String[] args) throws Exception {
-
+    
     Scanner scn = new Scanner(System.in);
     int n = scn.nextInt();
-    int [] arr = new int[n];
-    for( int i =0; i<n ;i++ ){
+
+    int[] arr = new int[n];
+
+    for( int i=0; i<n; i++){
         arr[i] = scn.nextInt();
     }
 
-    int num = (int)Math.pow(2 , n);
-    for( int i =0 ; i< num; i++){
+    int power = (int)Math.pow( 2 , n);
 
-        int no = i;
-        int power = 1;
-        int total = 0;
+    for( int i=0; i< power; i++){
 
+        int val = decToBinary(i);
+        int j = (int)(Math.pow(10 , n-1));
+        
+        for(int k = 0 ; k<n; k++){
 
-        while( no!=0){
-            int r = no % 2;
-            no= no/2;
-            total += r*power ;
-            power *= 10;
+            int ans = val / j;
 
-        }
-
-        int j = 0;
-        while( total != 0 || j<3){
-
-            int r = total % 10;
-            if(r*arr[j] == 0){
-                System.out.print("-\t");
+            if( ans == 0){
+                System.out.print("-"+"\t");
             }else{
-                System.out.print(r*arr[j]+"\t");
+                System.out.print(ans*arr[k]+"\t");
             }
+          
+            val %= j;
+            j  /= 10;
             
-            j++;
-            total = total/10;
-
+            
         }
+
         System.out.println();
-
     }
-    
+ }
 
+ public static int decToBinary( int n){
 
+     int total = 0, power = 1;
+
+     while( n != 0 ){
+
+         int c = n % 2;
+         total += c*power;
+
+         n /= 2;
+         power *= 10;
+
+     }
+
+     return total;
  }
 
 }
-
