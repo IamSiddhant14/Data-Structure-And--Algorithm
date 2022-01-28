@@ -18,7 +18,7 @@ public class Get_Stair_Paths {
         if( n == 0 ){
             
             ArrayList<String> a = new ArrayList<>();
-            a.add("");
+            a.add("");//Here we are not returning an empty arrayList because we want to run our loop in line number 30 , and if we return an empty arraylist then it would result in not running the loop and hence our one step wont be counted 
             return a; 
 
         }
