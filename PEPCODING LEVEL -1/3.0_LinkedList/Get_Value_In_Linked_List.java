@@ -89,7 +89,7 @@ public class Get_Value_In_Linked_List {
           Node curr = head;
           int count = 0;
           
-          while( count < idx ){//Here its zero indexing 
+          while( count < idx ){//Here and after that as well it will be zero indexing 
               
               curr = curr.next;
               count++;
