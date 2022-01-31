@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Display_A_Linkedlist {
+class Display_A_Linkedlist {
 
   public static class Node {
     int data;
