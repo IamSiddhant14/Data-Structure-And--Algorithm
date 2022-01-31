@@ -1,8 +1,19 @@
 
+
+// int [] a = {1,2,3,4,5,6};
+// int [] b = new int [a.length];
+
+
+// Here we have used this "new" keyword which help us in creating an new copy ,but if would not have used new in that case a shallow copy would have been created , because of which any change made on array "b" will refelect in array "a " as well
+
+// for (int i = 0; a.length; i++){
+//     b[i] = a[i];
+// }
+          
 import java.io.*;
 import java.util.*;
 
-public class Add_Last_In_Linked_List {
+class Add_Last_In_Linked_List {
 
   public static class Node {
     int data;

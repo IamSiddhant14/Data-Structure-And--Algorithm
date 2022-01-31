@@ -37,7 +37,7 @@ public class Display_A_Linkedlist {
         if(size == 0)
            return;
         
-        Node curr = head;//Refrence variable storing address
+        Node curr = head;//Reffrence variable storing address, as we havent used the new keyword over here , if we would had used the new keyword then it would result in an formation of an node object , but here it just an reffrence vatiable storing address
         while( curr != null){
             
             System.out.print(curr.data+" ");
