@@ -218,17 +218,28 @@ public class Mid_Of_Linked_List {
  
     public int mid(){
         
-      int l = size();
+    //   int l = size();
       
-      if( l % 2 == 0){
+    //   if( l % 2 == 0){
           
-          return getNodeAt( (l/2)-1).data;
+    //       return getNodeAt( (l/2)-1).data;
           
-      }else{
+    //   }else{
           
-          return getNodeAt( (l/2)).data;
+    //       return getNodeAt( (l/2)).data;
           
-      }
+    //   }
+
+    Node slow = head;
+    Node fast = head;
+    
+    while( fast.next != null && fast.next.next != null ){
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    
+    return slow.data;
+    
     }
   }
 
