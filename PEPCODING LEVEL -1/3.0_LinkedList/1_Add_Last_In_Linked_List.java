@@ -14,7 +14,6 @@ import java.io.*;
 import java.util.*;
 
 class Add_Last_In_Linked_List {
-
   public static class Node {
     int data;
     Node next;
@@ -26,19 +25,18 @@ class Add_Last_In_Linked_List {
     int size;
 
     void addLast(int val) {
-      Node temp = new Node();
-      temp.data =  val;
+      
+      Node n1 = new Node();//Making an object(Node) from Node class
+      n1.data = val;//Defining the values
       
       if( size == 0){
-          head = temp;
-          tail = temp;
+          head = n1;
+          tail = n1;
           
       }else{
-          
-          tail.next = temp;
-          tail = temp;
-          tail.next = null;
-          
+          tail.next = n1;
+          n1.next = null;
+          tail = n1;
       }
       
       size++;
@@ -71,4 +69,3 @@ class Add_Last_In_Linked_List {
     testList(list);
   }
 }
-    
