@@ -1,8 +1,6 @@
 import java.io.*;
 import java.util.*;
-
-public class Remove_First_In_Linkedlist {
-
+class Remove_First_In_Linkedlist{
   public static class Node {
     int data;
     Node next;
@@ -40,15 +38,25 @@ public class Remove_First_In_Linkedlist {
     }
 
     public void removeFirst(){
-        if( size == 0){
-            System.out.println("List is empty");
-            return;
-        }else{
-            Node curr = head;
-            head = head.next;
-            --size;
-        }
-
+        
+      if( size == 0 ){
+          
+          System.out.println("List is empty");
+          return ;
+          
+      }else if ( size == 1 ){
+          
+          head = null;
+          tail = null;
+          
+      }else{
+          
+          head = head.next;
+          
+      }
+      
+      size--;
+      
       
     }
   }
@@ -73,4 +81,3 @@ public class Remove_First_In_Linkedlist {
     }
   }
 }
-    
