@@ -2,7 +2,6 @@ import java.io.*;
 import java.util.*;
 
 class Display_A_Linkedlist {
-
   public static class Node {
     int data;
     Node next;
@@ -33,19 +32,20 @@ class Display_A_Linkedlist {
     }
 
     public void display(){
-        
-        if(size == 0)
-           return;
-        
-        Node curr = head;//Reffrence variable storing address, as we havent used the new keyword over here , if we would had used the new keyword then it would result in an formation of an node object , but here it just an reffrence vatiable storing address
-        while( curr != null){
-            
-            System.out.print(curr.data+" ");
-            curr = curr.next;
-            
-        }
-        System.out.println();
-        
+      
+       Node curr = head;
+       
+       while( curr != null ){
+           System.out.print(curr.data+" ");
+           curr = curr.next;
+       }
+       
+       if( size != 0 ){
+           System.out.println();
+       }
+      
+      
+      
     }
   }
 
@@ -67,5 +67,3 @@ class Display_A_Linkedlist {
     }
   }
 }
-    
-
