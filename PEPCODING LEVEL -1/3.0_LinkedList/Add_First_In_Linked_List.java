@@ -86,22 +86,22 @@ public class Add_First_In_Linked_List {
     }
 
     public void addFirst(int val) {
-      Node temp = new Node();
-      temp.data= val;
+        
+      Node node = new Node();
+      node.data = val;
       
       if( size == 0){
-          temp.next = null;
-          head = temp;
-          tail = temp;
+          head = node;
+          tail = node;
+          
       }else{
-        temp.next = head;
-        head = temp;
+          node.next = head;
+          head = node;
       }
       
       size++;
-      
-
-    }
+    
+  }
   }
 
   public static void main(String[] args) throws Exception {
