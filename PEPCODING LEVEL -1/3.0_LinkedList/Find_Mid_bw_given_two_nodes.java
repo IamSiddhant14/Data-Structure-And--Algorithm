@@ -2,6 +2,12 @@ import java.util.*;
 import java.io.*;
 public class Find_Mid_bw_given_two_nodes {
 
+    public static class Node{
+        int data ;
+        Node next ;
+    }
+
+
     public static Node FindMid(Node head , Node tail){
 
         Node slow = head;
@@ -14,9 +20,6 @@ public class Find_Mid_bw_given_two_nodes {
             fast = fast.next.next; 
         }
         return slow;
-
-
-
 
 
     }
