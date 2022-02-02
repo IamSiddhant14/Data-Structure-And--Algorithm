@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Linked_List_To_Stack_Adapter {
 
-
   public static class LLToStackAdapter {
     LinkedList<Integer> list;
 
