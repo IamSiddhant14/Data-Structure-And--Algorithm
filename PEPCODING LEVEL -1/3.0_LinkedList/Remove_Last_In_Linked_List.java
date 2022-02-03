@@ -131,12 +131,14 @@ public class Remove_Last_In_Linked_List {
             
         }else{
             
-            Node curr = head;
-            for( int i =0; i<=size-3 ; i++){
-                curr = curr.next;
-            }
-            curr.next = null;
-            tail = curr;
+          Node curr = head;
+      
+          while( curr.next != null && curr.next.next != null   ){
+              curr = curr.next;
+          }
+          curr.next = null;
+          tail = curr;
+          size--;
             
         }
         size--;

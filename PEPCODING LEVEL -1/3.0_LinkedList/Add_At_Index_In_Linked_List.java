@@ -1,9 +1,7 @@
-   
 import java.io.*;
 import java.util.*;
 
-public class Add_At_Index_In_Linked_List {
- 
+public class Add_At_Index_In_Linked_List  {
   public static class Node {
     int data;
     Node next;
@@ -101,50 +99,40 @@ public class Add_At_Index_In_Linked_List {
 
     public void addAt(int idx, int val){
         
-    Node node = new Node();
-    node.data = val;
-    
-      if( idx < 0 && idx > size){
-          System.out.println("Invalid arguments");
-          return ;
-          
-      }else if( size == 0){
-          head = node;
-          tail = node;
-          node.next = null;
-          
-       }else if( size == 1 && idx == 0){
-          node.next = head;
-          head = node;
-          
-       }else if( size == 1 && idx == 1){
-           tail.next = node;
-           node.next = null;
-          
-        }else if( idx == 0){
-          node.next = head;
-          head = node;
-          
-       }else if( idx == size  ){
-          tail.next = node;
-          node.next = null;
-          
-       }else{
-          Node curr = head;
-          for( int i =0; i<idx-1 ; i++){
-              curr = curr.next;
-          }
-          
-        //   Node tail = curr.next;
-        //   curr.next = node;
-        //   node.next = tail; 
-          
-          node.next = curr.next;
-          curr.next = node;
-          
-      }
+        
+        
+        if( size == 0 || idx == 0){
+            addFirst(val);
+            
+        }else if( idx == size ){
+            addLast(val);
+            
+        }else if( idx < 0 || idx > size ){
+            System.out.println("Invalid arguments");
+            return;
+            
+        }else{
+            int count = 0;
+            Node curr = head;
+            
+            Node n = new Node();
+            n.data = val ;
+            
+            while( count <idx-1){
+                count++;
+                curr = curr.next;
+            }
+            
+            n.next = curr.next;
+            curr.next = n;
+            size++;
+        }
+        
+        
+        
+
       
-      size++;
+      
     }
   }
 
@@ -191,4 +179,3 @@ public class Add_At_Index_In_Linked_List {
     }
   }
 }
-
