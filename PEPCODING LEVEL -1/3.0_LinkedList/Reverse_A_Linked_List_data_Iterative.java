@@ -1,9 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-
 public class Reverse_A_Linked_List_data_Iterative {
-
   public static class Node {
     int data;
     Node next;
@@ -31,14 +29,6 @@ public class Reverse_A_Linked_List_data_Iterative {
 
     public int size() {
       return size;
-    }
-
-    private Node getNodeAt(int idx) {
-      Node temp = head;
-      for (int i = 0; i < idx; i++) {
-        temp = temp.next;
-      }
-      return temp;
     }
 
     public void display() {
@@ -78,22 +68,20 @@ public class Reverse_A_Linked_List_data_Iterative {
       }
     }
 
-    public int getAt(int idx){
-        
-        if( size == 0 || idx >= size || idx < 0 ){
-            System.out.println( "Invalid arguments");
-            return -1;
-        }else{
-            Node curr = head;
-            for( int i =0 ; i<idx; i++){
-                curr = curr.next;
-            }
-            
-            int val = curr.data;
-            return val;
+    public int getAt(int idx) {
+      if (size == 0) {
+        System.out.println("List is empty");
+        return -1;
+      } else if (idx < 0 || idx >= size) {
+        System.out.println("Invalid arguments");
+        return -1;
+      } else {
+        Node temp = head;
+        for (int i = 0; i < idx; i++) {
+          temp = temp.next;
         }
-        
-        
+        return temp.data;
+      }
     }
 
     public void addFirst(int val) {
@@ -166,27 +154,40 @@ public class Reverse_A_Linked_List_data_Iterative {
         size--;
       }
     }
+    
+    public Node nodeAt(int idx){
+        
+        Node curr = head;
+        
+        for( int i =0; i<idx-1; i++){
+            curr = curr.next;
+        }
+        //This case will fail when we are required to find the frist index         of the linked list then this will return curr.next
+        if( idx != 0 ){
+            curr = curr.next;
+        }
+        return curr;
+    }
 
-    public void reverseDI() {
-      // write your code here
-      
-      int i = 0;
-      int j = size-1;
-      
-      while( i < j){
-          
-          Node node1 = getNodeAt(i);
-          Node node2 = getNodeAt(j);
-          
-          int temp = node2.data;
-          node2.data = node1.data;
-          node1.data = temp;
-          
-          i++;
-          j--;
-          
-      }
-      
+    public void reverseDI(){
+        
+        int i =0;
+        int j = size-1;
+        
+        while( i < j ){
+            
+            Node n1 = nodeAt(i);
+            Node n2 = nodeAt(j);
+    
+            
+            int temp = n1.data;
+            n1.data = n2.data;
+            n2.data = temp;
+            
+            i++;
+            j--;
+
+        }
       
     }
   }
@@ -241,4 +242,3 @@ public class Reverse_A_Linked_List_data_Iterative {
     }
   }
 }
-    
