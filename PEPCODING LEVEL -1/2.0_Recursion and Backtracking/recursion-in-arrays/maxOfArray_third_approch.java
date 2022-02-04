@@ -15,6 +15,8 @@ public class maxOfArray_third_approch {
         }
 
         System.out.println(maxOfArray(arr,0));
+
+        scn.close();
     }
 
     public static int maxOfArray(int[] arr, int idx){
