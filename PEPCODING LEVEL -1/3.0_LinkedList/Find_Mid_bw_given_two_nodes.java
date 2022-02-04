@@ -13,7 +13,6 @@ public class Find_Mid_bw_given_two_nodes {
         Node slow = head;
         Node fast = head;
 
-        
 
         while(fast != tail && fast.next != tail){
             slow = slow.next;
