@@ -285,7 +285,7 @@ public class Using_constructors_Remove_Duplicates_In_A_Sorted_Linked_List {
       
       LinkedList n1 = new LinkedList();
       
-      while( this.size() > 0){
+      while( this.size() > 0){//Here "this" keyword reffers to the linked list which is provided to us by the question
           
           int val = this.getFirst();
           this.removeFirst();
