@@ -1,9 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-
 public class Merge_Sort_A_Linked_List {
-
   public static class Node {
     int data;
     Node next;
@@ -233,6 +231,7 @@ public class Merge_Sort_A_Linked_List {
 
       Node one = l1.head;
       Node two = l2.head;
+      
       while (one != null && two != null) {
         if (one.data < two.data) {
           ml.addLast(one.data);
@@ -255,37 +254,46 @@ public class Merge_Sort_A_Linked_List {
 
       return ml;
     }
+    
     public static Node midNode(Node head , Node tail){
         
         Node slow = head;
         Node fast = head;
         
-        while( fast != tail && fast.next != tail){
+        while( fast != tail && fast.next != tail ){
             slow = slow.next;
             fast = fast.next.next ;
-        }
-        
-        return slow;
-    }
-
-    public static LinkedList mergeSort(Node head, Node tail){
-        
-        if( head == tail ){
-            LinkedList base = new LinkedList();
-            base.addLast(head.data);
-            return base;
             
         }
         
-        Node mid = midNode(head , tail);
+        return slow;
         
-        LinkedList left = mergeSort(head, mid);
-        LinkedList right = mergeSort(mid.next, tail);
-        
-        LinkedList sortedList = mergeTwoSortedLists(left , right);
-        
-        return sortedList;
-        
+    }
+    
+    
+    
+
+    public static LinkedList mergeSort(Node head, Node tail){
+      
+      if( head == tail ){
+          
+          LinkedList l1 = new LinkedList();
+          l1.addLast(head.data);
+          return l1;
+          
+      }
+      
+      
+      Node mid = midNode(head , tail);
+      
+      LinkedList n1 = mergeSort( head,mid );
+      LinkedList n2 = mergeSort( mid.next,tail );
+      
+      LinkedList l1 = mergeTwoSortedLists(n1 , n2);
+      
+      return l1;
+      
+
     }
   }
 
@@ -305,5 +313,3 @@ public class Merge_Sort_A_Linked_List {
     l1.display();
   }
 }
-    
-
