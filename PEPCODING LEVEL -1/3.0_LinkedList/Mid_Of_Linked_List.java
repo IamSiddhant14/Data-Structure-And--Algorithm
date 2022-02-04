@@ -2,8 +2,6 @@ import java.io.*;
 import java.util.*;
 
 public class Mid_Of_Linked_List {
-
-
   public static class Node {
     int data;
     Node next;
@@ -217,29 +215,24 @@ public class Mid_Of_Linked_List {
     }
  
     public int mid(){
-        
-    //   int l = size();
       
-    //   if( l % 2 == 0){
-          
-    //       return getNodeAt( (l/2)-1).data;
-          
-    //   }else{
-          
-    //       return getNodeAt( (l/2)).data;
-          
-    //   }
-
-    Node slow = head;
-    Node fast = head;
-    
-    while( fast.next != null && fast.next.next != null ){
-        slow = slow.next;
-        fast = fast.next.next;
-    }
-    
-    return slow.data;
-    
+      Node slow = head;
+      Node fast = head;
+      
+      if( size % 2 != 0){
+        while( fast.next != null ){
+          slow = slow.next ;
+          fast = fast.next.next;
+        }
+      }else{
+        while( fast.next.next != null ){
+          slow = slow.next ;
+          fast = fast.next.next;
+        }
+        
+      }
+     
+      return slow.data;
     }
   }
 
@@ -300,5 +293,3 @@ public class Mid_Of_Linked_List {
     }
   }
 }
-    
-
