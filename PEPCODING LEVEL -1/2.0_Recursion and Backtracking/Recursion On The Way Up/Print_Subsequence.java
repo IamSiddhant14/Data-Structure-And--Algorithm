@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Print_Subsequence {
 
-
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         String s = scn.nextLine();
