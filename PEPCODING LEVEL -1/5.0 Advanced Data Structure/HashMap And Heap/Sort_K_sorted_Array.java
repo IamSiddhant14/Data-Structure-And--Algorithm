@@ -16,7 +16,7 @@ public class Sort_K_sorted_Array {
       
       PriorityQueue< Integer> pq = new PriorityQueue <>();
 
-      for( int i =0; i<=k ; i++ ){
+      for( int i =0; i<=k ; i++ ){//If k is 3 then add 4 elements to the priority queue and so on
           pq.add(arr[i]);
       }
 
