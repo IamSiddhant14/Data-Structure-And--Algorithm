@@ -1,58 +1,53 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
+ import java.lang.*;
+ import java.io.*;
+ class Main
+  {
+ 	 public static void main (String[] args) throws IOException
+ 	  {
+ 	 	 Scanner scn= new Scanner(System.in);
+ 	    	 int n = scn.nextInt();
+ 	 	 int[] num = new int[n];
+ 	 	 for (int i = 0; i < n; i++) {
+ 	 	 	 	 num[i] = scn.nextInt();
+ 	 	 	 }
+ 	 	 int k = scn.nextInt();
+ 	 	 solve(n,num,k);
+ 	  }
 
-public class K_Largest_Elements {
+	   
+ 	 // -----------------------------------------------------
+ 	 // This is a functional problem. Only this function has to be written.
+ 	 // This function takes as input an array,n length of array and k.
+ 	 // It should print required output.
 
-        public static void main(String[] args) throws IOException {
+ 	  public static void solve(int n,int[] arr,int k){
+ 	     
+		  PriorityQueue<Integer> pq = new PriorityQueue<>();
 
-            Scanner scn = new Scanner(System.in);
-            int n = scn.nextInt();
-            int[] num = new int[n];
-            for (int i = 0; i < n; i++) {
-                num[i] = scn.nextInt();
-            }
-            int k = scn.nextInt();
-            solve(n, num, k);
+		  for( int i =0; i<k; i++){
+			  pq.add(arr[i]);
+		  }
 
-        }
-        // -----------------------------------------------------
-        // This is a functional problem. Only this function has to be written.
-        // This function takes as input an array,n length of array and k.
-        // It should print required output.
+		  for( int i = k ; i<arr.length ; i++){
 
-        public static void solve(int n, int[] arr, int k) {
+			  int val = pq.peek();
 
-            PriorityQueue<Integer> pq = new PriorityQueue<>();
-            int a = 0;
+			  if( val < arr[i]){
+				  pq.remove();
+				  pq.add(arr[i]);
+			  }
+		  }
 
-            for (int ele : arr) {
+		  ArrayList<Integer> al = new ArrayList<Integer>();
 
-                if (a < k) {
+		  while( pq.size() != 0 ){
+			  al.add(pq.remove());
+		  }
 
-                    pq.add(ele);
-                    a++;
+		  for( int i = al.size() - 1; i>= 0 ; i--){
+			  System.out.print(al.get(i)+" ");
+		  }
 
-                } else {
-
-                    int val = pq.peek();
-                    if (ele > val) {
-
-                        pq.remove();
-                        pq.add(ele);
-
-                    }
-                }
-
-            }
-
-            while (pq.size() != 0) {
-
-                System.out.print(pq.peek());
-                pq.remove();
-
-            }
-
-        }
-    }
-
+     }
+ }
