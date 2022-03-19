@@ -27,23 +27,22 @@ import java.util.*;
   public static int[] solve(int[] arr) {
     int n = arr.length;
     int [] ans = new int[n];
-    
+
     Arrays.fill(ans , -1);
-    
+
     Stack<Integer> st = new Stack<>();
     for( int i =n-1; i>= 0 ; i--){
-        
+
         while( st.size() != 0 && arr[st.peek()] > arr[i]){
             int idx = st.pop() ;
             ans[idx] = arr[i] ;
         }
         st.push(i);
     }
-   
+
      return ans;
- 
- 
- 
+
   }
 
 }
+
