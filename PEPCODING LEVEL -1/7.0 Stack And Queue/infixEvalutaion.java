@@ -45,7 +45,7 @@ public class infixEvalutaion {
 
     public static void main( String [] args ){
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String exp = scn.nextLine();
+        String exp = "hcoucu7)";
 
         Stack<Character> operator = new Stack<> () ;
         Stack<Integer> operand = new Stack<> () ;
